@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <title>FORMULARIO DE REGISTRO</title>
+</head>
+
+<body>
+    <div class="group">
+        <form id="registration-form" action="backend/submit.php" method="post" novalidate>
+            <h2><em>Formulario de registro</em></h2>
+            <div class="input-container">
+                <input type="text" id="nombre" name="nombre" class="form-input" required />
+                <label for="nombre">Nombre <span><em>(requerido)</em></span></label>
+                <div class="input-error" id="nombre-error"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="primer_apellido" name="primer_apellido" class="form-input" required />
+                <label for="primer_apellido">Primer Apellido <span><em>(requerido)</em></span></label>
+                <div class="input-error" id="primer_apellido-error"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="segundo_apellido" name="segundo_apellido" class="form-input" required />
+                <label for="segundo_apellido">Segundo Apellido <span><em>(requerido)</em></span></label>
+                <div class="input-error" id="segundo_apellido-error"></div>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" name="email" class="form-input" required />
+                <label for="email">Email <span><em>(requerido)</em></span></label>
+                <div class="input-error" id="email-error"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="login" name="login" class="form-input" required />
+                <label for="login">Login <span><em>(requerido)</em></span></label>
+                <div class="input-error" id="login-error"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" name="password" class="form-input" required />
+                <label for="password">Password <span><em>(requerido)</em></span></label>
+                <div class="input-error" id="password-error"></div>
+            </div>
+            <input type="submit" id="submit-btn" name="submit" class="form-btn" required value="Suscribirse" />
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

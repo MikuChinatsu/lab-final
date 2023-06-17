@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Usuarios Registrados</title>
+</head>
+
+<body>
+    <h2>Lista de usuarios registrados:</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Email</th>
+            <th>Login</th>
+        </tr>
+        <?php while ($row = $result->fetch_assoc()) : ?>
+        <tr>
+            <td>
+                <?php echo $row["ID"]; ?>
+            </td>
+            <td>
+                <?php echo $row["NOMBRE"]; ?>
+            </td>
+            <td>
+                <?php echo $row["PRIMER_APELLIDO"]; ?>
+            </td>
+            <td>
+                <?php echo $row["SEGUNDO_APELLIDO"]; ?>
+            </td>
+            <td>
+                <?php echo $row["EMAIL"]; ?>
+            </td>
+            <td>
+                <?php echo $row["LOGIN"]; ?>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+</body>
+
+</html>
